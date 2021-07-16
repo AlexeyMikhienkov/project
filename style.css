@@ -1,0 +1,266 @@
+body {
+    padding: 30px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    background-color: #eee;
+    width: 1350px;
+    height: 650px;
+    margin: 0px auto;
+}
+ 
+.externalBlock {
+    background-color: white;
+    margin: 0px auto;
+    width: 800px;
+    height: 650px;
+}
+
+.mainBlock {
+    width: 90%;
+    height: 80%;
+    top: 60px;
+    left: 40px;
+    position: relative;
+}
+
+.mainBlock div {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.app {
+    background-color: #501392;
+    width: 100%;
+    height: 82%;
+}
+
+.footer {
+    background-color: #360d67;
+    width: 100%;
+    height: 18%;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: calc((720px - 370px) / 2);
+    top: 20px;
+    background: #260451;
+    border: 5px solid #260451;
+    border-radius: 8px;
+}
+
+.segment {
+    margin: 1px;
+    padding: 1px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #260451;
+}
+
+.hiddenCell,
+.cell {
+    text-align: center;
+    border: 1px solid #260451;
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+    background: #42117c;
+    color: white;
+    font-weight: 900;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    outline: none;
+}
+
+.hiddenCell {
+    font-size: 0; 
+    line-height: 0;
+}
+
+.supposedCell {
+    text-align: center;
+    border: 1px solid #260451;
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+    background: #e92a9c;
+    color: white;
+    font-weight: 900;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    outline: none;
+}
+
+.hiddenCell:focus {
+    animation: flash-on-focus;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.hiddenCell:hover {
+    background-color: #3a0d6f;
+}
+
+
+.supposedCell:focus {
+    animation: flash-on-focus;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flash-on-focus{
+    0% {
+        background-color: #61319b;
+    }
+    100% {
+        background-color: #854dcb;
+    }
+}
+
+.numbersPanel {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: calc((720px - 370px) / 2);
+    top: 10px;
+}
+
+.button,
+#clear {
+    width: calc((390px - 2px) / 5);
+    height: 34px;
+    border: 1px solid #360d67;
+    border-radius: 4px;
+    background: #5d26a0;
+    font-weight: 900;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: #511f8f;
+}
+
+
+#clear:hover {
+    background-color: #511f8f;
+}
+
+.startButton {
+    background-color: #d1ced5;
+    border-radius: 20px;
+    color: #2b303d;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    left: calc((720px - 300px) / 2);
+    bottom: 350px;
+    outline: none;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.startButton:hover {
+    background-color: white;
+}
+
+.startButton:checked {
+    transition: none;
+}
+
+.textParagraph {
+    color: white;
+    font-weight: 600;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    word-wrap: normal; 
+    text-align: center;
+    line-height: 1.5;
+}
+
+.textStorage {
+    position: absolute;
+    bottom: 400px;
+    left: calc((720px - 470px) / 2);
+    width: 470px;
+    height: 200px;
+}
+
+.questionStorage {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: calc((720px - 370px) / 2);
+    top: 10px;
+    width: 390px;
+    height: 70px;
+}
+
+.questionStore {
+    width: 100%;
+    height: 50%;
+}
+
+.question {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    background: #360d67;
+    color: white;
+    font-weight: 900;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    outline: none;
+    left: calc((390px - 200px) / 2);
+    bottom: 20px;
+}
+
+.buttonsBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+}
+
+
+.questionButton {
+    background-color: #5d26a0;
+    color: white;
+    width: 60px;
+    height: 35px;
+    top: 5px;
+    border: 1px solid #360d67;
+    border-radius: 4px;
+    font-weight: 900;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.questionButton:hover {
+    background-color: #511f8f;
+}
+
+#no {
+    position: relative;
+    left: 120px;
+    bottom: 5px;
+}
+
+#yes {
+    position: relative;
+    left: 140px;
+    bottom: 5px;
+}
